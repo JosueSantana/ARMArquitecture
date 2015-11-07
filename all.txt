@@ -1,0 +1,12 @@
+arm_alu.v
+datapath_test.v
+datapath.v
+decoder_4x16.v
+instruction_decoder.v
+mux_2x1.v
+mux_4x1.v
+mux_16x1.v
+register_file.v
+register32.v
+rightRotator_32.v
+shifter_32.v
