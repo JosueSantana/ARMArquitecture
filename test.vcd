@@ -1,0 +1,92 @@
+$date
+	Sat Nov  7 13:29:25 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ram_read $end
+$var reg 32 ! Address [31:0] $end
+$upscope $end
+$scope module ram_read $end
+$var wire 32 " DataOut [31:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bz "
+b0 !
+$end
+#15
+bz01001010 "
+#20
+bz "
+b1 !
+#25
+bz01010101 "
+#30
+bz "
+b10 !
+#45
+bz00000000 "
+#50
+bz "
+b11 !
+#55
+bz00001101 "
+#60
+bz "
+b100 !
+#75
+bz00010010 "
+#80
+bz "
+b101 !
+#85
+bz00101011 "
+#90
+bz "
+b110 !
+#105
+bz00100000 "
+#110
+bz "
+b111 !
+#115
+bz01101010 "
+#120
+bz "
+b1000 !
+#135
+bz00100100 "
+#140
+bz "
+b1001 !
+#145
+bz10010101 "
+#150
+bz "
+b1010 !
+#165
+bz00011000 "
+#170
+bz "
+b1011 !
+#175
+bz11011110 "
+#180
+bz "
+b1100 !
+#195
+bz00100100 "
+#200
+bz "
+b1101 !
+#205
+bz00101011 "
+#210
+bz "
+b1110 !
+#300
