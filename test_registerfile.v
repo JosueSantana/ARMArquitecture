@@ -10,20 +10,21 @@ module test_registerfile;
 
 	initial begin
 		clk = 1'b0;
-		repeat (60) #5 clk=!clk;
-	end
+		clr=0;
+		LE = 0;
 
-	initial fork
-		I=32'h0000000A;
+		I=32'h00000000;
 		Rc=4'b0000;
 		Ra=4'b0000;
 		Rb=4'b0001;
-		clr=0;
-		#3 LE = 0;
-		#7 I=32'h00000008;
-		#7 Rc=4'b0001;
-		#16 LE = 1;
-		#21 clr=1;
+
+		forever begin
+			#5 clk=!clk;
+		end
+	end
+
+	initial fork
+		
 	join
 
 	initial begin

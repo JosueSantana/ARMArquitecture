@@ -23,11 +23,13 @@ module datapath_test();
 
 		//#15 $display(" d.registers.R0.D= %h\n d.registers.R0.Q = %h\n d.registers.R0.LE=%b\n d.registers.clr=%b\n d.registers.R0.Clk = %b", d.registers.R0.D, d.registers.R0.Q,d.registers.R0.LE, d.registers.clr, d.registers.R0.Clk);
 
-		#30 instruction = 32'h03B010AA;
+		#25 instruction = 32'h03B0A003;
 
-		#45 instruction = 32'h03B0A0BA;
+		#35 instruction = 32'h02912003;
 
-		#60 instruction = 32'h03B0A0FF;
+		#45 instruction = 32'h00923001;
+
+		#55 Clr = 0;
 	join
 
 
