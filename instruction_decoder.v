@@ -1,4 +1,7 @@
-module instruction_decoder(output reg shifter_en, output reg rotator_en, output reg registerFile_en, output reg sel, output reg [3:0] opcode, ra, rb, rc, rotate_imm, output reg [7:0] immediate, output reg [1:0] shift, output reg [4:0] shift_imm, input [31:0] instruction);
+module instruction_decoder(output reg shifter_en, output reg rotator_en, output reg registerFile_en, output reg ram_en, 
+	output reg instRegister_en, output reg mar_en, output reg mdr_en, output reg mfc, output reg [1:0] wordSel, 
+	output reg mdrSel, output reg sel, output reg [3:0] opcode, ra, rb, rc, rotate_imm, output reg [7:0] immediate, 
+	output reg [1:0] shift, output reg [4:0] shift_imm, input [31:0] instruction);
 
 	wire [3:0] wopcode,wrc,wra,wrb,wrotate_imm;
 	wire[7:0] wimmediate;

@@ -1,5 +1,5 @@
 arm_alu.v
-datapath_test.v
+test_datapath.v
 datapath.v
 decoder_4x16.v
 instruction_decoder.v
@@ -10,3 +10,4 @@ register_file.v
 register32.v
 rightRotator_32.v
 shifter_32.v
+memory_unit.v
