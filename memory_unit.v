@@ -9,20 +9,19 @@ module memory_unit (output reg [31:0] DataOut, output reg MFC,
 			2'b00:
 				if(Enable)
 				begin
-					MFC = 1'b1;
-					
+					MFC = 1'b0;
 					if(ReadWrite) DataOut[7:0] = Mem[Address]; 								
 					else
 					begin 
 						Mem[Address] = DataIn[7:0];
 					end
-					MFC = 1'b0;
+					MFC = 1'b1;
 				end
 				else DataOut = 32'bz;
 			2'b01:
 				if(Enable)
 				begin
-					MFC = 1'b1;
+					MFC = 1'b0;
 					if(ReadWrite)
 						begin
 							DataOut[15:8] = Mem[Address];
@@ -33,13 +32,13 @@ module memory_unit (output reg [31:0] DataOut, output reg MFC,
 							Mem[Address] = DataIn[15:8];
 							Mem[Address + 1] = DataIn[7:0];		
 						end
-					MFC = 1'b0;
+					MFC = 1'b1;
 				end
 				else DataOut = 32'bz;
 			2'b10:
 				if(Enable)
 				begin
-					MFC = 1'b1;
+					MFC = 1'b0;
 					if(ReadWrite)
 						begin
 							DataOut[31:24] = Mem[Address];
@@ -55,16 +54,16 @@ module memory_unit (output reg [31:0] DataOut, output reg MFC,
 							Mem[Address + 2] = DataIn[15:8];
 							Mem[Address + 3] = DataIn[7:0];					
 						end	
-					MFC = 1'b0;	
+					MFC = 1'b1;	
 				end
 				else DataOut = 32'bz;
 			default:
 				if(Enable)
 				begin
-					MFC = 1'b1;
+					MFC = 1'b0;
 					if(ReadWrite) DataOut[7:0] = Mem[Address]; 
 					else Mem[Address] = DataIn[7:0];
-					MFC = 1'b0;
+					MFC = 1'b1;
 				end	
 				else DataOut = 32'bz;
 			endcase
