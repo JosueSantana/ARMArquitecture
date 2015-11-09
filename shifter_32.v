@@ -1,5 +1,13 @@
-module shifter_32(output reg [31:0] Y, output reg carry, input [31:0] Rm, input [4:0] shift_imm, input [1:0] shift, input carryFlag, enable);
+module shifter_32(output reg [31:0] Y, output reg carry, input [31:0] Rm, input [11:0] shifter_operand, input carryFlag, enable);
 	
+	wire [4:0] shift_imm;
+	wire [1:0] shift;
+
+	assign shift_imm = shifter_operand[11:7];
+	assign shift = shifter_operand[6:5];
+
+
+
 	//right rotate extend
 	wire [31:0] rrx_y;
 	assign rrx_y = Rm >> 1;

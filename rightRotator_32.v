@@ -1,9 +1,14 @@
-module rightRotator_32(output reg [31:0] Y, output reg carry, input [7:0] immediate, input [3:0] rotate_imm, input enable, carryFlag);
+module rightRotator_32(output reg [31:0] Y, output reg carry, input [11:0] shifter_operand, input enable, carryFlag);
 
 wire [4:0] select;
 wire [31:0] extended_immediate;
 wire [63:0] immediate_double;
 wire [31:0] array [0:31];
+wire [7:0] immediate;
+wire [3:0] rotate_imm;
+
+assign immediate = shifter_operand[7:0];
+assign rotate_imm = shifter_operand[11:8];
 
 assign select = rotate_imm + rotate_imm;
 assign extended_immediate = {24'h000000,immediate};

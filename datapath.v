@@ -4,11 +4,10 @@ module datapath(input [31:0] instruction, input Clr, Clk);
 	wire wShEn, wRotEn, wRegEn, wRamEn, wInstEn, wMarEn, wMdrEn, wSel, wMdrSel, 
 		 wV, wC, wN, wZ, wC_rot, wC_shift, wC_alu, wMFC, wRW;
 
-	wire [1:0] wShift, wWordSel;
-	wire [3:0] wOp, wRa, wRb, wRc, wRotImm;
-	wire [4:0] wShImm;
-	wire [7:0] wImm;
+	wire [1:0] wWordSel;
+	wire [3:0] wOp, wRa, wRb, wRc;
 	wire [31:0] wRotOut, wShiftOut, wAluOut, wMuxOut, wMdrMuxOut, wRegY0, wRegY1, wInst, wRamOut, wMar, wMdr;
+	wire [11:0] wShifter_operand;
 
 	assign wInst = instruction;
 
@@ -16,13 +15,13 @@ module datapath(input [31:0] instruction, input Clr, Clk);
 
 	//Modules
 	instruction_decoder decoder (wShEn, wRotEn, wRegEn, wRamEn, wInstEn, wMarEn, wMdrEn, wMFC, wWordSel, wMdrSel, wSel, wOp, wRa, wRb, 
-								 wRc, wRotImm, wImm, wShift, wShImm, wInst);
+								 wRc, wShifter_operand, wInst);
 
 	register_file		registers (wRegY0, wRegY1, wAluOut, wRa, wRb, wRc, wRegEn, Clk, Clr);
 
-	rightRotator_32		rRotator (wRotOut, wC_rot, wImm, wRotImm, wRotEn, wC);
+	rightRotator_32		rRotator (wRotOut, wC_rot, wShifter_operand, wRotEn, wC);
 	
-	shifter_32			shift (wShiftOut, wC_shift, wRegY1, wShImm, wShift, wC, wShEn);
+	shifter_32			shift (wShiftOut, wC_shift, wRegY1, wShifter_operand, wC, wShEn);
 
 	mux_2x1				mux2_1 (wMuxOut, wSel, wRotOut, wShiftOut);
 
