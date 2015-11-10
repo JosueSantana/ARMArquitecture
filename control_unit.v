@@ -2,9 +2,13 @@ module control_unit (output reg regClr, marEn, irEn, memEn, memRW, input [31:0] 
 	
 	reg [3:0] state, nextState;
 	wire [3:0] cond;
+	wire [2:0] instruction_format;
 
 	assign cond = instruction[31:28];
+	assign instruction_format = instruction[27:25];
+
 	assign state <= nextState;
+
 
 	always @(posedge clk, negedge clr)
 		if (!clr) begin 
@@ -86,7 +90,12 @@ module control_unit (output reg regClr, marEn, irEn, memEn, memRW, input [31:0] 
 					default: nextState = 4'b0001;
 				endcase
 			4'b0100: 
-
+				case (instruction_format)
+					3'b000: nextState = 4'b0101;
+					3'b001: nextState = 4'b0110;
+				endcase
+			4'b0101: // Handles data processing instructions with 000
+			4'b0110: // Handles data processing instructions with 001
 		endcase
 
 
