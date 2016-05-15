@@ -1,0 +1,375 @@
+#! /usr/local/Cellar/icarus-verilog/0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fce51600730 .scope module, "shifter_32" "shifter_32" 2 1;
+ .timescale 0 0;
+v0x7fce516033e0_0 .net "Rm", 31 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v0x7fce51613470_0 .var "Y", 31 0;
+v0x7fce51613500_0 .net *"_s38", 30 0, L_0x7fce51615700; 1 drivers
+v0x7fce516135a0_0 .net *"_s40", 0 0, C4<0>; 1 drivers
+v0x7fce51613630 .array "array", 31 0;
+v0x7fce51613630_0 .net v0x7fce51613630 0, 31 0, L_0x7fce51613f50; 1 drivers
+v0x7fce51613630_1 .net v0x7fce51613630 1, 31 0, L_0x7fce51613fe0; 1 drivers
+v0x7fce51613630_2 .net v0x7fce51613630 2, 31 0, L_0x7fce51614070; 1 drivers
+v0x7fce51613630_3 .net v0x7fce51613630 3, 31 0, L_0x7fce51614100; 1 drivers
+v0x7fce51613630_4 .net v0x7fce51613630 4, 31 0, L_0x7fce51614210; 1 drivers
+v0x7fce51613630_5 .net v0x7fce51613630 5, 31 0, L_0x7fce516142a0; 1 drivers
+v0x7fce51613630_6 .net v0x7fce51613630 6, 31 0, L_0x7fce51614330; 1 drivers
+v0x7fce51613630_7 .net v0x7fce51613630 7, 31 0, L_0x7fce516143e0; 1 drivers
+v0x7fce51613630_8 .net v0x7fce51613630 8, 31 0, L_0x7fce51614570; 1 drivers
+v0x7fce51613630_9 .net v0x7fce51613630 9, 31 0, L_0x7fce51614600; 1 drivers
+v0x7fce51613630_10 .net v0x7fce51613630 10, 31 0, L_0x7fce51614690; 1 drivers
+v0x7fce51613630_11 .net v0x7fce51613630 11, 31 0, L_0x7fce51614780; 1 drivers
+v0x7fce51613630_12 .net v0x7fce51613630 12, 31 0, L_0x7fce51614810; 1 drivers
+v0x7fce51613630_13 .net v0x7fce51613630 13, 31 0, L_0x7fce51614910; 1 drivers
+v0x7fce51613630_14 .net v0x7fce51613630 14, 31 0, L_0x7fce516149a0; 1 drivers
+v0x7fce51613630_15 .net v0x7fce51613630 15, 31 0, L_0x7fce51614ab0; 1 drivers
+v0x7fce51613630_16 .net v0x7fce51613630 16, 31 0, L_0x7fce51614470; 1 drivers
+v0x7fce51613630_17 .net v0x7fce51613630 17, 31 0, L_0x7fce51614dd0; 1 drivers
+v0x7fce51613630_18 .net v0x7fce51613630 18, 31 0, L_0x7fce51614e60; 1 drivers
+v0x7fce51613630_19 .net v0x7fce51613630 19, 31 0, L_0x7fce51614d40; 1 drivers
+v0x7fce51613630_20 .net v0x7fce51613630 20, 31 0, L_0x7fce51614f90; 1 drivers
+v0x7fce51613630_21 .net v0x7fce51613630 21, 31 0, L_0x7fce516150d0; 1 drivers
+v0x7fce51613630_22 .net v0x7fce51613630 22, 31 0, L_0x7fce51614ef0; 1 drivers
+v0x7fce51613630_23 .net v0x7fce51613630 23, 31 0, L_0x7fce51615220; 1 drivers
+v0x7fce51613630_24 .net v0x7fce51613630 24, 31 0, L_0x7fce51615020; 1 drivers
+v0x7fce51613630_25 .net v0x7fce51613630 25, 31 0, L_0x7fce51615380; 1 drivers
+v0x7fce51613630_26 .net v0x7fce51613630 26, 31 0, L_0x7fce51615160; 1 drivers
+v0x7fce51613630_27 .net v0x7fce51613630 27, 31 0, L_0x7fce516154f0; 1 drivers
+v0x7fce51613630_28 .net v0x7fce51613630 28, 31 0, L_0x7fce516152b0; 1 drivers
+v0x7fce51613630_29 .net v0x7fce51613630 29, 31 0, L_0x7fce51615670; 1 drivers
+v0x7fce51613630_30 .net v0x7fce51613630 30, 31 0, L_0x7fce51615410; 1 drivers
+v0x7fce51613630_31 .net v0x7fce51613630 31, 31 0, L_0x7fce51615800; 1 drivers
+v0x7fce516139e0_0 .var "carry", 0 0;
+v0x7fce51613a70_0 .net "carryFlag", 0 0, C4<z>; 0 drivers
+v0x7fce51613b30_0 .net "doubleRm", 63 0, L_0x7fce516159b0; 1 drivers
+v0x7fce51613bb0_0 .net "enable", 0 0, C4<z>; 0 drivers
+v0x7fce51613c80_0 .net "rrx_y", 31 0, L_0x7fce51614b40; 1 drivers
+v0x7fce51613d00_0 .net "shift", 1 0, L_0x7fce51614c50; 1 drivers
+v0x7fce51613de0_0 .net "shift_imm", 4 0, L_0x7fce51615580; 1 drivers
+v0x7fce51613e60_0 .net "shifter_operand", 11 0, C4<zzzzzzzzzzzz>; 0 drivers
+E_0x7fce516004a0/0 .event edge, v0x7fce51613a70_0, v0x7fce516033e0_0, v0x7fce51613d00_0, v0x7fce51613de0_0;
+E_0x7fce516004a0/1 .event edge, v0x7fce51613bb0_0;
+E_0x7fce516004a0 .event/or E_0x7fce516004a0/0, E_0x7fce516004a0/1;
+L_0x7fce51613f50 .part L_0x7fce516159b0, 0, 32;
+L_0x7fce51613fe0 .part L_0x7fce516159b0, 1, 32;
+L_0x7fce51614070 .part L_0x7fce516159b0, 2, 32;
+L_0x7fce51614100 .part L_0x7fce516159b0, 3, 32;
+L_0x7fce51614210 .part L_0x7fce516159b0, 4, 32;
+L_0x7fce516142a0 .part L_0x7fce516159b0, 5, 32;
+L_0x7fce51614330 .part L_0x7fce516159b0, 6, 32;
+L_0x7fce516143e0 .part L_0x7fce516159b0, 7, 32;
+L_0x7fce51614570 .part L_0x7fce516159b0, 8, 32;
+L_0x7fce51614600 .part L_0x7fce516159b0, 9, 32;
+L_0x7fce51614690 .part L_0x7fce516159b0, 10, 32;
+L_0x7fce51614780 .part L_0x7fce516159b0, 11, 32;
+L_0x7fce51614810 .part L_0x7fce516159b0, 12, 32;
+L_0x7fce51614910 .part L_0x7fce516159b0, 13, 32;
+L_0x7fce516149a0 .part L_0x7fce516159b0, 14, 32;
+L_0x7fce51614ab0 .part L_0x7fce516159b0, 15, 32;
+L_0x7fce51614470 .part L_0x7fce516159b0, 16, 32;
+L_0x7fce51614dd0 .part L_0x7fce516159b0, 17, 32;
+L_0x7fce51614e60 .part L_0x7fce516159b0, 18, 32;
+L_0x7fce51614d40 .part L_0x7fce516159b0, 19, 32;
+L_0x7fce51614f90 .part L_0x7fce516159b0, 20, 32;
+L_0x7fce516150d0 .part L_0x7fce516159b0, 21, 32;
+L_0x7fce51614ef0 .part L_0x7fce516159b0, 22, 32;
+L_0x7fce51615220 .part L_0x7fce516159b0, 23, 32;
+L_0x7fce51615020 .part L_0x7fce516159b0, 24, 32;
+L_0x7fce51615380 .part L_0x7fce516159b0, 25, 32;
+L_0x7fce51615160 .part L_0x7fce516159b0, 26, 32;
+L_0x7fce516154f0 .part L_0x7fce516159b0, 27, 32;
+L_0x7fce516152b0 .part L_0x7fce516159b0, 28, 32;
+L_0x7fce51615670 .part L_0x7fce516159b0, 29, 32;
+L_0x7fce51615410 .part L_0x7fce516159b0, 30, 32;
+L_0x7fce51615800 .part L_0x7fce516159b0, 31, 32;
+L_0x7fce51615580 .part C4<zzzzzzzzzzzz>, 7, 5;
+L_0x7fce51614c50 .part C4<zzzzzzzzzzzz>, 5, 2;
+L_0x7fce51615700 .part C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>, 1, 31;
+L_0x7fce51614b40 .concat [ 31 1 0 0], L_0x7fce51615700, C4<0>;
+L_0x7fce516159b0 .concat [ 32 32 0 0], C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>;
+S_0x7fce51603280 .scope generate, "genblk1" "genblk1" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51603368 .param/l "i" 2 19, +C4<00>;
+S_0x7fce51603120 .scope generate, "genblk01" "genblk01" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51603208 .param/l "i" 2 19, +C4<01>;
+S_0x7fce51602fc0 .scope generate, "genblk001" "genblk001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce516030a8 .param/l "i" 2 19, +C4<010>;
+S_0x7fce51602e60 .scope generate, "genblk0001" "genblk0001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602f48 .param/l "i" 2 19, +C4<011>;
+S_0x7fce51602d00 .scope generate, "genblk00001" "genblk00001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602de8 .param/l "i" 2 19, +C4<0100>;
+S_0x7fce51602bb0 .scope generate, "genblk000001" "genblk000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602c98 .param/l "i" 2 19, +C4<0101>;
+S_0x7fce51602a60 .scope generate, "genblk0000001" "genblk0000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602b48 .param/l "i" 2 19, +C4<0110>;
+S_0x7fce516028f0 .scope generate, "genblk00000001" "genblk00000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce516029d8 .param/l "i" 2 19, +C4<0111>;
+S_0x7fce51602790 .scope generate, "genblk000000001" "genblk000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602878 .param/l "i" 2 19, +C4<01000>;
+S_0x7fce51602630 .scope generate, "genblk0000000001" "genblk0000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602718 .param/l "i" 2 19, +C4<01001>;
+S_0x7fce516024d0 .scope generate, "genblk00000000001" "genblk00000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce516025b8 .param/l "i" 2 19, +C4<01010>;
+S_0x7fce51602370 .scope generate, "genblk000000000001" "genblk000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602458 .param/l "i" 2 19, +C4<01011>;
+S_0x7fce51602210 .scope generate, "genblk0000000000001" "genblk0000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce516022f8 .param/l "i" 2 19, +C4<01100>;
+S_0x7fce516020b0 .scope generate, "genblk00000000000001" "genblk00000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602198 .param/l "i" 2 19, +C4<01101>;
+S_0x7fce51601f50 .scope generate, "genblk000000000000001" "genblk000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51602038 .param/l "i" 2 19, +C4<01110>;
+S_0x7fce51601df0 .scope generate, "genblk0000000000000001" "genblk0000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601ed8 .param/l "i" 2 19, +C4<01111>;
+S_0x7fce51601c90 .scope generate, "genblk00000000000000001" "genblk00000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601d78 .param/l "i" 2 19, +C4<010000>;
+S_0x7fce51601b30 .scope generate, "genblk000000000000000001" "genblk000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601c18 .param/l "i" 2 19, +C4<010001>;
+S_0x7fce516019d0 .scope generate, "genblk0000000000000000001" "genblk0000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601ab8 .param/l "i" 2 19, +C4<010010>;
+S_0x7fce51601870 .scope generate, "genblk00000000000000000001" "genblk00000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601958 .param/l "i" 2 19, +C4<010011>;
+S_0x7fce51601710 .scope generate, "genblk000000000000000000001" "genblk000000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce516017f8 .param/l "i" 2 19, +C4<010100>;
+S_0x7fce516015b0 .scope generate, "genblk0000000000000000000001" "genblk0000000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601698 .param/l "i" 2 19, +C4<010101>;
+S_0x7fce51601450 .scope generate, "genblk00000000000000000000001" "genblk00000000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601538 .param/l "i" 2 19, +C4<010110>;
+S_0x7fce516012f0 .scope generate, "genblk000000000000000000000001" "genblk000000000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce516013d8 .param/l "i" 2 19, +C4<010111>;
+S_0x7fce51601190 .scope generate, "genblk0000000000000000000000001" "genblk0000000000000000000000001" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601278 .param/l "i" 2 19, +C4<011000>;
+S_0x7fce51601030 .scope generate, "$gen1[25]" "$gen1[25]" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51601118 .param/l "i" 2 19, +C4<011001>;
+S_0x7fce51600ed0 .scope generate, "$gen1[26]" "$gen1[26]" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51600fb8 .param/l "i" 2 19, +C4<011010>;
+S_0x7fce51600d70 .scope generate, "$gen1[27]" "$gen1[27]" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51600e58 .param/l "i" 2 19, +C4<011011>;
+S_0x7fce51600c10 .scope generate, "$gen1[28]" "$gen1[28]" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51600cf8 .param/l "i" 2 19, +C4<011100>;
+S_0x7fce51600ab0 .scope generate, "$gen1[29]" "$gen1[29]" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51600b98 .param/l "i" 2 19, +C4<011101>;
+S_0x7fce51600960 .scope generate, "$gen1[30]" "$gen1[30]" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce51600a48 .param/l "i" 2 19, +C4<011110>;
+S_0x7fce51600810 .scope generate, "$gen1[31]" "$gen1[31]" 2 19, 2 19, S_0x7fce51600730;
+ .timescale 0 0;
+P_0x7fce516008f8 .param/l "i" 2 19, +C4<011111>;
+    .scope S_0x7fce51600730;
+T_0 ;
+    %wait E_0x7fce516004a0;
+    %load/v 8, v0x7fce51613bb0_0, 1;
+    %jmp/0xz  T_0.0, 8;
+    %load/v 8, v0x7fce51613de0_0, 5;
+    %cmpi/u 8, 0, 5;
+    %jmp/0xz  T_0.2, 4;
+    %load/v 8, v0x7fce51613d00_0, 2;
+    %cmpi/u 8, 0, 2;
+    %jmp/1 T_0.4, 6;
+    %cmpi/u 8, 1, 2;
+    %jmp/1 T_0.5, 6;
+    %cmpi/u 8, 2, 2;
+    %jmp/1 T_0.6, 6;
+    %cmpi/u 8, 3, 2;
+    %jmp/1 T_0.7, 6;
+    %jmp T_0.8;
+T_0.4 ;
+    %load/v 8, v0x7fce516033e0_0, 32;
+    %set/v v0x7fce51613470_0, 8, 32;
+    %load/v 8, v0x7fce51613a70_0, 1;
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.8;
+T_0.5 ;
+    %set/v v0x7fce51613470_0, 0, 32;
+    %ix/load 1, 31, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.9, 4;
+    %load/x1p 8, v0x7fce516033e0_0, 1;
+    %jmp T_0.10;
+T_0.9 ;
+    %mov 8, 2, 1;
+T_0.10 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.8;
+T_0.6 ;
+    %ix/load 1, 31, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.11, 4;
+    %load/x1p 10, v0x7fce516033e0_0, 1;
+    %jmp T_0.12;
+T_0.11 ;
+    %mov 10, 2, 1;
+T_0.12 ;
+    %mov 8, 10, 1; Move signal select into place
+    %mov 9, 0, 1;
+    %cmpi/u 8, 0, 2;
+    %jmp/0xz  T_0.13, 4;
+    %set/v v0x7fce51613470_0, 0, 32;
+    %ix/load 1, 31, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.15, 4;
+    %load/x1p 8, v0x7fce516033e0_0, 1;
+    %jmp T_0.16;
+T_0.15 ;
+    %mov 8, 2, 1;
+T_0.16 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.14;
+T_0.13 ;
+    %set/v v0x7fce51613470_0, 1, 32;
+    %ix/load 1, 31, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.17, 4;
+    %load/x1p 8, v0x7fce516033e0_0, 1;
+    %jmp T_0.18;
+T_0.17 ;
+    %mov 8, 2, 1;
+T_0.18 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+T_0.14 ;
+    %jmp T_0.8;
+T_0.7 ;
+    %load/v 8, v0x7fce51613c80_0, 31; Select 31 out of 32 bits
+    %load/v 39, v0x7fce51613a70_0, 1;
+    %set/v v0x7fce51613470_0, 8, 32;
+    %load/v 8, v0x7fce516033e0_0, 1; Only need 1 of 32 bits
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.8;
+T_0.8 ;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/v 8, v0x7fce51613d00_0, 2;
+    %cmpi/u 8, 0, 2;
+    %jmp/1 T_0.19, 6;
+    %cmpi/u 8, 1, 2;
+    %jmp/1 T_0.20, 6;
+    %cmpi/u 8, 2, 2;
+    %jmp/1 T_0.21, 6;
+    %cmpi/u 8, 3, 2;
+    %jmp/1 T_0.22, 6;
+    %jmp T_0.23;
+T_0.19 ;
+    %load/v 8, v0x7fce516033e0_0, 32;
+    %load/v 40, v0x7fce51613de0_0, 5;
+    %ix/get 0, 40, 5;
+    %shiftl/i0  8, 32;
+    %set/v v0x7fce51613470_0, 8, 32;
+    %movi 8, 32, 32;
+    %load/v 40, v0x7fce51613de0_0, 5;
+    %movi 45, 0, 27;
+    %sub 8, 40, 32;
+    %ix/get 1, 8, 32;
+    %jmp/1 T_0.24, 4;
+    %load/x1p 8, v0x7fce516033e0_0, 1;
+    %jmp T_0.25;
+T_0.24 ;
+    %mov 8, 2, 1;
+T_0.25 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.23;
+T_0.20 ;
+    %load/v 8, v0x7fce516033e0_0, 32;
+    %load/v 40, v0x7fce51613de0_0, 5;
+    %ix/get 0, 40, 5;
+    %shiftr/i0  8, 32;
+    %set/v v0x7fce51613470_0, 8, 32;
+    %load/v 8, v0x7fce51613de0_0, 5;
+    %movi 13, 0, 27;
+    %subi 8, 1, 32;
+    %ix/get 1, 8, 32;
+    %jmp/1 T_0.26, 4;
+    %load/x1p 8, v0x7fce516033e0_0, 1;
+    %jmp T_0.27;
+T_0.26 ;
+    %mov 8, 2, 1;
+T_0.27 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.23;
+T_0.21 ;
+    %load/v 8, v0x7fce516033e0_0, 32;
+    %load/v 40, v0x7fce51613de0_0, 5;
+    %ix/get 0, 40, 5;
+    %shiftr/s/i0  8, 32;
+    %set/v v0x7fce51613470_0, 8, 32;
+    %load/v 8, v0x7fce51613de0_0, 5;
+    %movi 13, 0, 27;
+    %subi 8, 1, 32;
+    %ix/get 1, 8, 32;
+    %jmp/1 T_0.28, 4;
+    %load/x1p 8, v0x7fce516033e0_0, 1;
+    %jmp T_0.29;
+T_0.28 ;
+    %mov 8, 2, 1;
+T_0.29 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.23;
+T_0.22 ;
+    %ix/getv 3, v0x7fce51613de0_0;
+    %load/av 8, v0x7fce51613630, 32;
+    %set/v v0x7fce51613470_0, 8, 32;
+    %load/v 8, v0x7fce51613de0_0, 5;
+    %movi 13, 0, 27;
+    %subi 8, 1, 32;
+    %ix/get 1, 8, 32;
+    %jmp/1 T_0.30, 4;
+    %load/x1p 8, v0x7fce516033e0_0, 1;
+    %jmp T_0.31;
+T_0.30 ;
+    %mov 8, 2, 1;
+T_0.31 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x7fce516139e0_0, 8, 1;
+    %jmp T_0.23;
+T_0.23 ;
+T_0.3 ;
+    %jmp T_0.1;
+T_0.0 ;
+    %set/v v0x7fce51613470_0, 3, 32;
+    %set/v v0x7fce516139e0_0, 3, 1;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "shifter_32.v";

@@ -1,8 +1,8 @@
 arm_alu.v
-test_datapath.v
 datapath.v
+datapath_test.v
 decoder_4x16.v
-instruction_decoder.v
+control_unit_s.v
 mux_2x1.v
 mux_4x1.v
 mux_16x1.v

@@ -6,13 +6,10 @@ module shifter_32(output reg [31:0] Y, output reg carry, input [31:0] Rm, input 
 	assign shift_imm = shifter_operand[11:7];
 	assign shift = shifter_operand[6:5];
 
-
-
 	//right rotate extend
 	wire [31:0] rrx_y;
 	assign rrx_y = Rm >> 1;
 	
-
 	//right rotate
 	wire [63:0] doubleRm;
 	wire [31:0] array [0:31];
@@ -64,11 +61,11 @@ module shifter_32(output reg [31:0] Y, output reg carry, input [31:0] Rm, input 
 					end
 					2'b10: begin
 						Y = $signed(Rm) >>> shift_imm;
-						carry = Rm[shift_imm -1];
+						carry = Rm[shift_imm - 1];
 					end
 					2'b11: begin
 						Y = array[shift_imm];
-						carry = Rm[shift_imm-1];
+						carry = Rm[shift_imm - 1];
 					end
 				endcase
 			end

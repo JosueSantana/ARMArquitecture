@@ -1,10 +1,10 @@
 module arm_alu (output reg [31:0] Y, output reg V, C, N, Z, 
-				input [31:0] in_1, in_2, input [3:0] opcode,
+				input [31:0] in_1, in_2, input [4:0] opcode,
 				input C_in );
 	reg [31: 0] temp;
 		always @ (in_1, in_2, C_in, opcode)
 			case(opcode)
-				4'b0000:						// Bitwise AND
+				5'b00000:						// Bitwise AND
 						begin
 							Y = in_1 & in_2;
 							if (Y == 32'b0)
@@ -12,7 +12,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 							else
 								Z = 1'b0;
 						end
-				4'b0001:						// Bitwise Exclusive OR 
+				5'b00001:						// Bitwise Exclusive OR 
 						begin
 							Y = (in_1 && !in_2) | (!in_1 && in_2);
 							if (Y == 32'b0)
@@ -20,7 +20,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 							else
 								Z = 1'b0;
 						end
-				4'b0010:						// Subtract
+				5'b00010:						// Subtract
 						begin
 							Y = in_1 - in_2;
 							if (Y == 32'b0)
@@ -43,7 +43,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 
 						end
 
-				4'b0011:						// Reverse Subtract
+				5'b00011:						// Reverse Subtract
 						begin
 							Y = in_2 - in_1;
 
@@ -67,7 +67,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 								end
 						end
 
-				4'b0100:						// Add
+				5'b00100:						// Add
 						begin
 							Y = in_1 + in_2;
 
@@ -93,7 +93,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 								V = 0;
 						end
 
-				4'b0101:						// Add with Carry
+				5'b00101:						// Add with Carry
 						begin
 							Y = in_1 + in_2 + C_in;
 
@@ -118,7 +118,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 							else
 								V = 0;
 						end
-				4'b0110:						// Subtract with Carry
+				5'b00110:						// Subtract with Carry
 						begin
 							Y = in_1 - in_2 - !C_in;
 
@@ -139,7 +139,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 									else C = 1'b0;
 								end
 						end
-				4'b0111:						// Reverse Subtract with Carry
+				5'b00111:						// Reverse Subtract with Carry
 						begin
 							Y = in_2 - in_1 - !C_in;  
 
@@ -159,21 +159,21 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 									else	C = 1'b0;
 								end
 						end
-				4'b1000:						// Test
+				5'b01000:						// Test
 						begin
 							temp = in_1 && in_2;
 							if (temp == 32'b0)
 								Z = 1'b1;
 							else Z = 1'b0;
 						end
-				4'b1001:						// Test Equivalence
+				5'b01001:						// Test Equivalence
 						begin
 							temp = (in_1 && !in_2) | (!in_1 && in_2);
 							if (temp == 32'b0)
 								Z = 1'b1;
 							else Z = 1'b0;
 						end				 
-				4'b1010:						// Compare
+				5'b01010:						// Compare
 						begin
 							temp = in_1 - in_2;
 							if (temp == 32'b0)
@@ -194,7 +194,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 									else C = 1'b0;
 								end
 						end
-				4'b1011:						// Compare Negated
+				5'b01011:						// Compare Negated
 						begin
 							temp = in_1 + in_2;
 							if (temp == 32'b0)
@@ -215,7 +215,7 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 								end
 
 						end
-				4'b1100:						// Bitwise OR
+				5'b01100:						// Bitwise OR
 						begin
 							Y = in_1 | in_2;
 							if (Y == 32'b0)
@@ -223,14 +223,16 @@ module arm_alu (output reg [31:0] Y, output reg V, C, N, Z,
 							else Z = 1'b0;
 						end
 
-				4'b1101: Y = in_2;				// Move
-				4'b1110:						// Bit Clear
+				5'b01101: Y = in_2;				// Move
+				5'b01110:						// Bit Clear
 						begin
 							temp = in_1 & !in_2;
 							if (temp == 32'b0)
 								Z = 1'b1;
 							else Z = 1'b0;
 						end
-				4'b1111: Y = !in_2;				// Move Not
+				5'b01111: Y = !in_2;				// Move Not
+				5'b10000: Y = in_2 + 4;				// 4-byte increment
+				default: Y = in_2;					// use Move as default
 			endcase
 	endmodule

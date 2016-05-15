@@ -27,24 +27,24 @@ module ram_read;
 					ReadWrite = 1'b0;
 				end
 				#5 begin 
-					wordSelector = 00;
+					wordSelector = 01;
 					Enable = 1'b1; 
 					ReadWrite = 1'b1;				
 				end	
 				#5 begin
 					Address = Address + 1; 
-					wordSelector = 00;
+					wordSelector = 01;
 					Enable = 1'b0; 
 					ReadWrite = 1'b1;
 				end	
 				#5 begin 	
-					wordSelector = 00;
+					wordSelector = 01;
 					Enable = 1'b1; 
 					ReadWrite = 1'b1;
 				end	
 				#5 begin 
 					Address = Address + 1;
-					wordSelector = 00;
+					wordSelector = 01;
 					Enable = 1'b0; 
 					ReadWrite = 1'b1;
 				end	
